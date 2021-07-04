@@ -1,0 +1,227 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/cardview_dark_background">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:clipToPadding="false"
+        android:fillViewport="false"
+        android:paddingBottom="20dp"
+        android:scrollbars="none">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="10dp"
+            android:orientation="vertical">
+
+            <com.google.android.material.card.MaterialCardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="10dp"
+                app:cardCornerRadius="10dp"
+                app:cardElevation="3dp"
+                app:strokeWidth="2dp">
+
+                <RelativeLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="10dp">
+
+                    <TextView
+                        android:id="@+id/idSewa"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="center"
+                        android:text="Identitas Penyewa"
+                        android:textSize="19sp"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:id="@+id/txtktp"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/idSewa"
+                        android:layout_marginTop="10dp"
+                        android:text="No.KTP"
+                        android:textColor="@android:color/black"
+                        android:textSize="17sp" />
+
+                    <EditText
+                        android:id="@+id/edtktp"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/txtktp"
+                        android:hint="Masukkan No.KTP"
+                        android:inputType="number"
+                        android:maxLength="20"
+                        android:textSize="16sp" />
+
+                    <TextView
+                        android:id="@+id/txtName"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/edtktp"
+                        android:layout_marginTop="20dp"
+                        android:text="Nama Peyewa"
+                        android:textColor="@android:color/black"
+                        android:textSize="17sp" />
+
+                    <EditText
+                        android:id="@+id/edtnama"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/txtName"
+                        android:hint="Masukkan Nama (Max 15 karakter)"
+                        android:inputType="text"
+                        android:maxLength="20"
+                        android:textSize="16sp" />
+
+                    <TextView
+                        android:id="@+id/txtAlamat"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/edtnama"
+                        android:layout_marginTop="10dp"
+                        android:text="Alamat"
+                        android:textColor="@android:color/black"
+                        android:textSize="17sp" />
+
+                    <EditText
+                        android:id="@+id/edtalamat"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/txtAlamat"
+                        android:hint="Masukkan Alamat Anda"
+                        android:inputType="text"
+                        android:maxLength="100"
+                        android:textSize="16sp" />
+
+                    <TextView
+                        android:id="@+id/txtTlp"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/edtalamat"
+                        android:layout_marginTop="10dp"
+                        android:text="No.Telp"
+                        android:textColor="@android:color/black"
+                        android:textSize="17sp" />
+
+                    <EditText
+                        android:id="@+id/edthp"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/txtTlp"
+                        android:hint="Masukkan No. Telp/HP"
+                        android:inputType="number"
+                        android:maxLength="20"
+                        android:textSize="16sp" />
+
+                </RelativeLayout>
+
+            </com.google.android.material.card.MaterialCardView>
+
+            <com.google.android.material.card.MaterialCardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="10dp"
+                app:cardCornerRadius="10dp"
+                app:cardElevation="3dp"
+                app:strokeWidth="2dp">
+
+                <RelativeLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="10dp">
+
+                    <TextView
+                        android:id="@+id/idDtMbl"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="center"
+                        android:text="Data Kamera"
+                        android:textSize="19sp"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:id="@+id/txtMerk"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/idDtMbl"
+                        android:layout_marginTop="20dp"
+                        android:text="Merk Kamera"
+                        android:textColor="@android:color/black"
+                        android:textSize="17sp" />
+
+                    <Spinner
+                        android:id="@+id/spinmerk"
+                        android:layout_width="match_parent"
+                        android:layout_height="30dp"
+                        android:layout_below="@+id/txtMerk" />
+                    <TextView
+                        android:id="@+id/txtLmSewa"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/spinmerk"
+                        android:layout_marginTop="20dp"
+                        android:text="Lama Sewa /Hari"
+                        android:textColor="@android:color/black"
+                        android:textSize="17sp" />
+
+                    <EditText
+                        android:id="@+id/edtlama"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/txtLmSewa"
+                        android:hint="Masukkan Lamanya Hari Penyewaan"
+                        android:inputType="number"
+                        android:maxLength="10"
+                        android:textSize="16sp" />
+
+                    <Button
+                        android:id="@+id/bt_tgl"
+                        android:layout_below="@id/edtlama"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="end|bottom"
+                        android:layout_margin="8dp"
+                        android:text="Pilih tanggal"
+                        app:cornerRadius="50dp"
+                        android:textColor="@android:color/white"
+                        android:textSize="16sp"
+                        android:theme="@style/Theme.MaterialComponents.Light" />
+
+                    <EditText
+                        android:id="@+id/tvtgl"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/bt_tgl"
+                        android:maxLength="20"
+                        android:hint="Masukan Tanggal"
+                        android:textSize="16sp" />
+
+                </RelativeLayout>
+
+            </com.google.android.material.card.MaterialCardView>
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/btnsimpan"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="end|bottom"
+                android:layout_margin="8dp"
+                android:text="simpan"
+                app:cornerRadius="50dp"
+                android:textColor="@android:color/white"
+                android:textSize="16sp"
+                android:theme="@style/Theme.MaterialComponents.Light" />
+
+        </LinearLayout>
+
+    </ScrollView>
+
+</RelativeLayout>

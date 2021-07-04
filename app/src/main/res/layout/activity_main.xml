@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/cardview_dark_background">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <ImageView
+            android:id="@+id/icon"
+            android:layout_width="130dp"
+            android:layout_height="130dp"
+            android:layout_gravity="center"
+            android:layout_marginTop="56dp"
+            android:src="@drawable/logo1" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="28dp"
+            android:layout_marginBottom="28dp"
+            android:gravity="center"
+            android:text="GOCAM"
+            android:textColor="#FFFF"
+            android:textSize="22sp"
+            android:textStyle="bold" />
+
+
+        <Button
+            android:id="@+id/btn_info_kamera"
+            android:layout_gravity="center"
+            android:layout_width="189dp"
+            android:layout_height="80dp"
+            android:text="INFORMASI KAMERA"
+            android:textColor="@android:color/white"
+            android:textSize="16sp" />
+
+        <Button
+            android:id="@+id/btn_sewa"
+            android:layout_width="193dp"
+            android:layout_height="80dp"
+            android:text="SEWA KAMERA"
+            android:layout_gravity="center"
+            android:textColor="@android:color/white"
+            android:textSize="16sp" />
+
+        <Button
+            android:id="@+id/btn_listpesanan"
+            android:layout_width="193dp"
+            android:layout_height="80dp"
+            android:text="LIST PESANAN"
+            android:layout_gravity="center"
+            android:textColor="@android:color/white"
+            android:textSize="16sp" />
+
+        <Button
+            android:id="@+id/bt_customdialog"
+            android:layout_width="179dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_margin="8dp"
+            android:text="ABOUT US"
+            android:textColor="@android:color/white"
+            android:textSize="16sp" />
+    </LinearLayout>
+
+</RelativeLayout>

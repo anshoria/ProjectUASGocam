@@ -1,0 +1,7 @@
+<resources>
+    <string name="app_name">ProjectUAS</string>
+    <string name="register" />
+    <string name="username" />
+    <string name="simpan" />
+    <string name="oke" />
+</resources>
