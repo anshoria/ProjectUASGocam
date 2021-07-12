@@ -2,10 +2,7 @@ package com.example.projectuas;
 
 
 import android.content.Intent;
-import android.os.Build;
 import android.os.Bundle;
-import android.text.Html;
-import android.text.Spanned;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
@@ -13,20 +10,17 @@ import android.widget.TextView;
 import android.widget.Toast;
 
 import androidx.appcompat.app.AppCompatActivity;
-
-import com.example.projectuas.MainActivity;
-import com.example.projectuas.MainActivity;
-import com.example.projectuas.R;
-import com.example.projectuas.database.DBHelper;
 import com.example.projectuas.database.DBHelper;
 
-import static android.text.Html.fromHtml;
 
 public class Login extends AppCompatActivity {
+
+    //Mendeklarasikan variabel-variabel login
     EditText txUsername, txPassword;
     Button btnLogin;
     DBHelper dbHelper;
 
+    //menampilkan layout login dan mendefenisikan komponen edittext dan button
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -39,11 +33,8 @@ public class Login extends AppCompatActivity {
         dbHelper = new DBHelper(this);
 
 
-
+        //memberikan perintah pada tombol daftar untuk menampilkan halamann register
         TextView daftar = (TextView)findViewById(R.id.tvCreateAccount);
-        daftar.setText(fromHtml("Belum punya akun. " +
-                "</font><font color='#3b5998'>create one</font>"));
-
         daftar.setOnClickListener(new View.OnClickListener() {
 
 
@@ -54,6 +45,8 @@ public class Login extends AppCompatActivity {
             }
         });
 
+
+        //memberikan perintah pada button login untuk berpindah ke halaman utama
         btnLogin.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -71,13 +64,5 @@ public class Login extends AppCompatActivity {
         });
     }
 
-    public static Spanned fromHtml(String html){
-        Spanned result;
-        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.N){
-            result = Html.fromHtml(html, Html.FROM_HTML_MODE_LEGACY);
-        }else {
-            result = Html.fromHtml(html);
-        }
-        return result;
-    }
+
 }

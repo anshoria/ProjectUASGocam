@@ -13,6 +13,7 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.ProjectUAS"
         tools:ignore="ExtraText">
+        <activity android:name=".ListPesanan"></activity>
         <activity android:name=".Login">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -20,11 +21,8 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity
-            android:name=".MainActivity" />
-        <activity
-            android:name=".Register" />
-            android:parentActivityName=".login" />
+        <activity android:name=".MainActivity" />
+        <activity android:name=".Register" />
         <activity
             android:name=".DetailSewa"
             android:parentActivityName=".SewaKamera" />

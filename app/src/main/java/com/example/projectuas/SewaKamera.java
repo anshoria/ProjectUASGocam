@@ -20,6 +20,8 @@ import android.widget.Toast;
 import java.util.Calendar;
 
 public class SewaKamera extends AppCompatActivity {
+
+    //mendeklarasikan variabel pada kelas sewa kamera
     DatePickerDialog picker;
     Button bt_tgl;
     TextView tvtgl;
@@ -33,6 +35,7 @@ public class SewaKamera extends AppCompatActivity {
     String[] merk_kamera={"Sony A7","Panasonic Lumix","Samsung NX3000","Fujifilm X-H1","Nikon D850","Canon 1200D","GoPro Hero 7 Black"};
     String tempmerk;
 
+    //membuat fitur sewa kamera dengan memanggil layout sewa kamera dan mendefenisikan variabel-variabel pada method oncreate
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -49,6 +52,8 @@ public class SewaKamera extends AppCompatActivity {
         edtlama=findViewById(R.id.edtlama);
         spinmerk=findViewById(R.id.spinmerk);
 
+        //membuat objek baru dari arrayadapter
+        //memberikan nilai pada variabel merk kamera dengan membuat komponen spinner
         ArrayAdapter adapter=new ArrayAdapter(this,android.R.layout.simple_spinner_dropdown_item,merk_kamera);
         adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
         spinmerk.setAdapter(adapter);
@@ -63,6 +68,7 @@ public class SewaKamera extends AppCompatActivity {
         });
 
 
+        //membuat kalender untuk input tanggal
         bt_tgl.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -83,6 +89,7 @@ public class SewaKamera extends AppCompatActivity {
         });
 
 
+        //memberikan nilai pada variabel-variabel setelah mengklik button simpan
         btnsimpan=findViewById(R.id.btnsimpan);
         btnsimpan.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -100,6 +107,7 @@ public class SewaKamera extends AppCompatActivity {
                     return;
                 }
 
+                //membuat objel intent untuk berpindah ke kelas detail sewa
                 Intent i=new Intent(getApplicationContext(),DetailSewa.class);
                 i.putExtra("Nama",Nama);
                 i.putExtra("Alamat",Alamat);

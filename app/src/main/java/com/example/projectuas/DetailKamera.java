@@ -10,10 +10,13 @@ import android.widget.TextView;
 import android.os.Bundle;
 
 public class DetailKamera extends AppCompatActivity {
+
+    //mendeklarasikan variabel-variabel detail kamera
     Button btn_sewa;
     TextView  GetNama, GetHarga;
     ImageView GetGambar;
 
+    //menampilkan layout activity detail kamera
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -26,15 +29,12 @@ public class DetailKamera extends AppCompatActivity {
         GetNama = findViewById(R.id.getnama);
         GetHarga = findViewById(R.id.getharga);
         showData();
-        btn_sewa.setOnClickListener(v -> {
-            Intent ina=new Intent(getApplicationContext(),SewaKamera.class);
-            startActivity(ina);
-        });
 
 
     }
 
 
+    //mendefenisikan nama kamera dengan menggunakan switch case
     @SuppressLint("SetTextI18n")
     private void showData(){
         String nama = getIntent().getExtras().getString("MyName");

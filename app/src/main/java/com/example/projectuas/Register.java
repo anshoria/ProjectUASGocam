@@ -2,10 +2,7 @@ package com.example.projectuas;
 
 
 import android.content.ContentValues;
-import android.os.Build;
 import android.os.Bundle;
-import android.text.Html;
-import android.text.Spanned;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
@@ -17,11 +14,12 @@ import com.example.projectuas.database.DBHelper;
 
 public class Register extends AppCompatActivity {
 
+    //mendeklarasikan variabel-variabel untuk melakukan register
     EditText txUsernameReg, txPasswordReg, txConPassword;
     Button btnRegister;
     DBHelper dbHelper;
 
-
+    //membuat method oncreate untuk menampilkan layout activity register
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -35,6 +33,8 @@ public class Register extends AppCompatActivity {
         txConPassword = (EditText)findViewById(R.id.txConPassword);
         btnRegister = (Button) findViewById(R.id.btnRegister);
 
+
+        //menampung nilai hasil input user kemudian disimpan pada database dbhelper
         btnRegister.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -62,14 +62,4 @@ public class Register extends AppCompatActivity {
         });
     }
 
-    public static Spanned fromHtml(String html){
-        Spanned result;
-        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.N){
-            result = Html.fromHtml(html, Html.FROM_HTML_MODE_LEGACY);
-        }
-        else {
-            result = Html.fromHtml(html);
-        }
-        return result;
-    }
 }

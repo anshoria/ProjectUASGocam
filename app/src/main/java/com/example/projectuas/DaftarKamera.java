@@ -12,10 +12,14 @@ import androidx.appcompat.app.AppCompatActivity;
 import java.util.ArrayList;
 import java.util.Collections;
 
+
 public class DaftarKamera extends AppCompatActivity {
+
+    //mendeklarasikan variabel dengan jenis data arraylist
     private String[] listkamera = {"Sony","Panasonic","Samsung","Fujifilm","Nikon","Canon","GoPro"};
     private ArrayList<String> data;
 
+    //menampilkan layout activity daftar kamera
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -23,10 +27,14 @@ public class DaftarKamera extends AppCompatActivity {
         getSupportActionBar().setTitle("Daftar kamera");
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
 
+
         ListView listView = findViewById(R.id.listkamera);
+
+        //membuat objek dari clas data menjadi arraylist
         data = new ArrayList<>();
         getData();
 
+        //membuat objek dari array adapter
         ArrayAdapter<String> adapter = new ArrayAdapter<>
                 (this, R.layout.support_simple_spinner_dropdown_item, data);
         listView.setAdapter(adapter);

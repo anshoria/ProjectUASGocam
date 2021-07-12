@@ -3,7 +3,6 @@ package com.example.projectuas;
 import androidx.appcompat.app.AlertDialog;
 import androidx.appcompat.app.AppCompatActivity;
 
-import android.app.Activity;
 import android.app.Dialog;
 import android.content.DialogInterface;
 import android.content.Intent;
@@ -14,25 +13,23 @@ import android.widget.ImageView;
 import android.widget.TextView;
 
 
-import java.time.temporal.IsoFields;
-
-
 
 public class MainActivity extends AppCompatActivity {
 
+    //menampilkan layout activity main
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
         getSupportActionBar().setTitle("ProjekUAS");
 
+        //membuat fitur about us dengan memanggil layout customdialog kemudian menampilkan komponen-komponen
         Button btShow = (Button) findViewById(R.id.bt_customdialog);
         btShow.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                /**
-                 * Initiate Custom Dialog
-                 */
+
+                //Initiate Custom Dialog
                 final Dialog dialog = new Dialog(MainActivity.this);
                 dialog.setContentView(R.layout.customdialog);
                 dialog.setTitle("ProjekUAS");
@@ -40,15 +37,15 @@ public class MainActivity extends AppCompatActivity {
                 /**
                  * Mengeset komponen dari custom dialog
                  */
-                TextView satu= dialog.findViewById(R.id.Tim);
+                TextView satu= dialog.findViewById(R.id.App);
                 satu.setText("GoCam");
-                TextView dua= dialog.findViewById(R.id.Reza);
+                TextView dua= dialog.findViewById(R.id.Aplikasi);
                 dua.setText("Aplikasi Rental Kamera");
-                TextView tiga= dialog.findViewById(R.id.Said);
+                TextView tiga= dialog.findViewById(R.id.Ig);
                 tiga.setText("Instagram: @anshoria11");
-                TextView empat= dialog.findViewById(R.id.Abed);
+                TextView empat= dialog.findViewById(R.id.Fb);
                 empat.setText("Facebook: anshoria");
-                TextView lima= dialog.findViewById(R.id.abiyyi);
+                TextView lima= dialog.findViewById(R.id.Gmail);
                 lima.setText("Gmail: anshoriakbar11@gmail.com");
                 ImageView image =dialog.findViewById(R.id.icon);
                 image.setImageResource(R.mipmap.ic_launcher);
@@ -65,8 +62,11 @@ public class MainActivity extends AppCompatActivity {
             }
         });
 
+
+        //memanggil variabel untuk menampilkan fitur-fitur pada menu utama
         Button btn_informasi = findViewById(R.id.btn_info_kamera);
         Button btn_sewa = findViewById(R.id.btn_sewa);
+        Button btn_Listpesanan = findViewById(R.id.btn_listpesanan);
 
         btn_informasi.setOnClickListener(v -> {
             startActivity(new Intent(MainActivity.this, DaftarKamera.class));
@@ -75,8 +75,14 @@ public class MainActivity extends AppCompatActivity {
             Intent sew = new Intent(getApplicationContext(), SewaKamera.class);
             startActivity(sew);
         });
+        btn_Listpesanan.setOnClickListener(v -> {
+            Intent Listp = new Intent(getApplicationContext(), ListPesanan.class);
+            startActivity(Listp);
+        });
 
     }
+
+    //memberikan perintah untuk menampilkan teks dan perintah keluar pada tombol back
     @Override
     public void onBackPressed() {
         AlertDialog.Builder builder = new AlertDialog.Builder(this);

@@ -1,24 +1,22 @@
 package com.example.projectuas;
 
 
-import androidx.appcompat.app.AlertDialog;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.annotation.SuppressLint;
-import android.content.DialogInterface;
 import android.os.Bundle;
-import android.view.View;
-import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.TextView;
 
 public class DetailSewa extends AppCompatActivity  {
 
+    //deklarasi variabel pada kelas detail sewa
     TextView getktp,getmerk,getnama,getalamat,getnomor,getlama,gettanggal,gettotal;
     ImageView getgambar;
-    Button btexit;
     int iLama, iHarga,dTotal;
     String Total;
+
+    //memanggil layout detail sewa
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -34,11 +32,11 @@ public class DetailSewa extends AppCompatActivity  {
         gettanggal = findViewById(R.id.gettanggal);
         gettotal = findViewById(R.id.getharga);
         getgambar = findViewById(R.id.getgambar);
-        btexit=findViewById(R.id.btexit);
         showData();
 
     }
 
+    //memberikan nilai pada variabel-variabel
     @SuppressLint("SetTextI18n")
     private void showData(){
         String merk = getIntent().getExtras().getString("Merk");
@@ -49,6 +47,7 @@ public class DetailSewa extends AppCompatActivity  {
         String lama=getIntent().getExtras().getString("lama");
         String tanggal=getIntent().getExtras().getString("Tanggal");
 
+        //membuat daftar merk kamera dengan menggunakan switch case
         switch (merk) {
             case "Sony A7":
                 iHarga = 280000;
