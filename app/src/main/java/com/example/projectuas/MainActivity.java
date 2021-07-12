@@ -35,7 +35,7 @@ public class MainActivity extends AppCompatActivity {
                  */
                 final Dialog dialog = new Dialog(MainActivity.this);
                 dialog.setContentView(R.layout.customdialog);
-                dialog.setTitle("Rezatian07");
+                dialog.setTitle("ProjekUAS");
 
                 /**
                  * Mengeset komponen dari custom dialog
