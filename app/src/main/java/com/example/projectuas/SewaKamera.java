@@ -107,7 +107,7 @@ public class SewaKamera extends AppCompatActivity {
                     return;
                 }
 
-                //membuat objel intent untuk berpindah ke kelas detail sewa
+                //membuat objek intent untuk berpindah ke kelas detail sewa
                 Intent i=new Intent(getApplicationContext(),DetailSewa.class);
                 i.putExtra("Nama",Nama);
                 i.putExtra("Alamat",Alamat);

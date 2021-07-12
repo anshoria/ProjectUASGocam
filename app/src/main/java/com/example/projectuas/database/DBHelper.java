@@ -21,7 +21,7 @@ public class DBHelper extends SQLiteOpenHelper {
 
 
 
-    //mendefenisi nila context dengan nama database, factory dan version pada method DBHelper
+    //mendefenisi nilai context dengan nama database, factory dan version pada method DBHelper
     public DBHelper(Context context) {
         super(context, database_name, null, 2);
         db = getWritableDatabase();
